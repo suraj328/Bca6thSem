@@ -10,7 +10,9 @@
  */
 import java.awt.*;
 import javax.swing.*;
-public class Lab1 extends JFrame 
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+public class Lab1 extends JFrame implements ActionListener
 {
     JTextField txt1,txt2;
     JLabel lbl1,lbl2,lbl3;
@@ -35,6 +37,8 @@ public class Lab1 extends JFrame
 	lbl1 =  new JLabel();
 	lbl1.setText("num1");
 	lbl1.setBounds(90,10,150,30);
+	lbl1.setForeground(Color.darkGray);
+	lbl1.setBackground(Color.YELLOW);
 	f1.add(lbl1);
 	//text field1
 	txt1 = new JTextField();
@@ -45,6 +49,8 @@ public class Lab1 extends JFrame
 	lbl2 =  new JLabel();
 	lbl2.setText("num2");
 	lbl2.setBounds(90,75,150,30);
+	lbl2.setForeground(Color.darkGray);
+	lbl2.setBackground(Color.YELLOW);
 	f1.add(lbl2);
 	//text field1
 	txt2 = new JTextField();
@@ -66,9 +72,20 @@ public class Lab1 extends JFrame
 	//creating label for result
 	lbl3 =  new JLabel();
 	lbl3.setText("Result is:");
+	lbl3.setBackground(Color.YELLOW);
 	lbl3.setBounds(90,205,150,30);
+	lbl3.setForeground(Color.darkGray);
 	f1.add(lbl3);
+	
+	//adding button to event listiner
+	btn1.addActionListener(this);
+	btn2.addActionListener(this);
+	
     }
+	public void actionPerformed(ActionEvent e)
+	{
+		
+	}
 
     public static void main(String[] args)
      {
