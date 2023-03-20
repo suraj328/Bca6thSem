@@ -1,6 +1,6 @@
  //Jframe
 //  JPannel
-//container\
+//container
 // component
 // event hanlding
 //button eveent handling action listener Listener Interface
@@ -29,7 +29,7 @@ public class Lab1 extends JFrame implements ActionListener
         ImageIcon img1 = new ImageIcon("sample.jpg");
         f1.setIconImage(img1.getImage());
         f1.getContentPane().setBackground(Color.cyan);
-	f1.getContentPane().setLayout(null);
+		f1.getContentPane().setLayout(null);
         f1.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 	//setting component
@@ -37,8 +37,6 @@ public class Lab1 extends JFrame implements ActionListener
 	lbl1 =  new JLabel();
 	lbl1.setText("num1");
 	lbl1.setBounds(90,10,150,30);
-	lbl1.setForeground(Color.darkGray);
-	lbl1.setBackground(Color.YELLOW);
 	f1.add(lbl1);
 	//text field1
 	txt1 = new JTextField();
@@ -49,8 +47,6 @@ public class Lab1 extends JFrame implements ActionListener
 	lbl2 =  new JLabel();
 	lbl2.setText("num2");
 	lbl2.setBounds(90,75,150,30);
-	lbl2.setForeground(Color.darkGray);
-	lbl2.setBackground(Color.YELLOW);
 	f1.add(lbl2);
 	//text field1
 	txt2 = new JTextField();
@@ -72,9 +68,7 @@ public class Lab1 extends JFrame implements ActionListener
 	//creating label for result
 	lbl3 =  new JLabel();
 	lbl3.setText("Result is:");
-	lbl3.setBackground(Color.YELLOW);
 	lbl3.setBounds(90,205,150,30);
-	lbl3.setForeground(Color.darkGray);
 	f1.add(lbl3);
 	
 	//adding button to event listiner
@@ -84,6 +78,19 @@ public class Lab1 extends JFrame implements ActionListener
     }
 	public void actionPerformed(ActionEvent e)
 	{
+		int num1 = Integer.parseInt(txt1.getText());
+		int num2 = Integer.parseInt(txt2.getText());
+		int total;
+		if(e.getSource() == btn1)
+		{
+			total =  num1 + num2;
+			lbl3.setText("sum is: "+String.valueOf(total));
+		}
+		else if(e.getSource() == btn2)
+		{
+			total =  num1 * num2;
+			lbl3.setText("mul is: "+String.valueOf(total));
+		}
 		
 	}
 
