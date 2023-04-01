@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class URLClassExample {
     public static void main(String[] args) {
         try {
-            URL url =  new URL("https://www.example.com/path/file.html?param1=value1&param2=value2#fragment");
+            URL url =  new URL("https://www.example.com:3000/path/file.html?param1=value1&param2=value2#fragment");
             System.out.println("host of url is: - "+ url.getHost());
             System.out.println("path of url is " + url.getPath());
             System.out.println("Query string of url is " + url.getQuery());
