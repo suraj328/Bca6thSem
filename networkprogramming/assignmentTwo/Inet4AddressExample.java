@@ -21,9 +21,9 @@ public class Inet4AddressExample {
 
             System.out.println("-------------Remote Machine------------");
             //cretaing instance of Internet4address to strore ipv4  address and host name of facebook;
-            Inet4Address remoteAddress = (Inet4Address) Inet4Address.getByName("www.facebook.com");
+            Inet4Address remoteAddress = (Inet4Address) Inet4Address.getByName("www.google.com");
             //print ipv4 address of any remote machine
-            System.out.println("remote host adress: " + remoteAddress.getHostAddress());
+            System.out.println("remote uthinkcrazy host adress: " + remoteAddress.getHostAddress());
             //print ipv4 host name of any remote machine
             System.out.println("remote host name: " + remoteAddress.getHostName());
 
