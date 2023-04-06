@@ -17,6 +17,9 @@ public class Inet4AddressExample {
             System.out.println("local host adress: " + localAddress.getHostAddress());
             //print ipv4 host name of your local machine
             System.out.println("local host name: " + localAddress.getHostName());
+            //getCanonicalHostName()  returns full quality doamian
+            System.out.println("qualify domain name is:- "+localAddress.getCanonicalHostName());
+
 
 
             System.out.println("-------------Remote Machine------------");
