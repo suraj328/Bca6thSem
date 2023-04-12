@@ -1,0 +1,31 @@
+//web cache
+Web caching is the activity of storing data for resuse, such as a copy of a web page 
+served by a web server
+2.it is created or stored the first time a user visits the page and the next time a user requests
+the same page, a cache will serve the copy, which helps keep the origin server from getting overloaded
+3.bY default, java does not cache will serve
+
+
+//read url content by response code using http for an url
+
+step1: create a connection to the url
+    URL =  new URL(urlToConnect)
+    HttpURLConnection httpUrlConnection = (HttpURLConnection) url.openConnection();
+
+step2: create input stram from the url connection
+    int responseCode =  httpUrlConnection.getResponseCode();
+    InputStream inputStram = null;
+
+    if(responseCode >= 200 && responseCode < 400){
+        inputStream = httpUrlConnection.getInputStream();
+
+    }else{
+        inputStream = httpUrlConnection.getErrorStream();
+    }
+step3:Read the content from input stream and print them to console
+    BufferedReader br = BufferedReader(inputStreamReader(inputStream))
+    String line = null;
+    while((line = br.readLine())!= null)
+    {
+        sysout(line);
+    }
