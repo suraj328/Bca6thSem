@@ -4,7 +4,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * RetrieveArbitaryHeaders
+ * 2.download page
  */
 public class RetrieveArbitaryHeaders {
 
