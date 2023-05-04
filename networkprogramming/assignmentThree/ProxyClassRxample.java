@@ -1,6 +1,5 @@
 // Java Program to illustrate Proxy Class
 // of java.net package
-
 // importing java net package to use address and url fields
 import java.net.*;
 // importing the java proxy package
