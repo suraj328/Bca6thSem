@@ -1,0 +1,14 @@
+Java Beans - A reusable software component written in java that can be manipulated visualaly in an application bulder tool.
+
+For example - all GUI Components inherit java.awt.Component class
+which means that we can rely on them to have certain standard methods like paint() setSize() etc.
+Java Beans are not actually required to inherit a particaular base class or
+implement particular interface. But They do provide suport for some or all of the 
+following features:-
+1.Introduction:- It is a process by which a builder tool analyzes how Beans Work.
+	-They adhere  to specific rules called design pattern for naming  bean features
+	-Each Bean has realted Bean information class , which provides properly method and event
+	-Each Bean information class implements a Bean Info interface,Which explicity lists Bean 
+	 features that are to be exposed to application builder tools
+2.Properties:-Properties control Beans apperance and Behavior.Builder tools introspect on a Bean to discover its properties and expose them for manipulation . hence we change Beans prorty at design time.
+3.customization- expected properties of a bean can be customized at desing time .customization allows users to alter the apperance and behavior of Bean. Bean supports customixation by using special sophicated Bean Customizers.
