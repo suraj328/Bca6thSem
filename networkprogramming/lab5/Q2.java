@@ -9,7 +9,7 @@ import java.util.Map;
 public class Q2 {
     public static void main(String[] args) {
         try {
-            URL url = new URL("https://www.google.com");
+            URL url = new URL("https://www.u-thinkcrazy.com");
             URLConnection connection =  url.openConnection();
             // Get Header files
             Map<String,List<String>> headers = connection.getHeaderFields();

@@ -32,6 +32,7 @@ public class AA {
 
                 // Close the connection
                 clientSocket.close();
+                // serverSocket.close();
                 System.out.println("Connection closed");
             }
 
