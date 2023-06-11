@@ -1,0 +1,17 @@
+//setting cookie
+Cookie firstName = new Cookie("first name",request.getParameter("first name"));
+Cookie lastName = new Cookie("last name",request.getParameter("last name"));
+
+//set expiry 
+firstName.setMaxAge(60*60*24);
+lastName.setMaxAge(60*60*24);
+
+//add both cookie to response header
+response.addCookie(firstName);
+response.addCookie(lasttName);
+
+// set response content type
+response.setContentType("text/html");
+PrintWriter out = response.getWriter();
+
+
