@@ -19,5 +19,13 @@ public class RmiServer extends UnicastRemoteObject implements RmiServerIntf {
         } catch (RemoteException e) {
             //di nothing,error means register already exist
         }
+        try {
+            
+            RmiServer obj = new RmiServer();
+            Naming.rebind("//localhost/RmiServer", obj);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        // // bind this object insatnce
     }
 }
