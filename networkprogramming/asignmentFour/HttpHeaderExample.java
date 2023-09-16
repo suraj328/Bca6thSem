@@ -1,4 +1,4 @@
-
+package asignmentFour;
 /**
  * HttpHeaderExample
  */
@@ -13,14 +13,13 @@ public class HttpHeaderExample {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             int i = 0;
             while (true) {
-                String key = conn.getHeaderFieldKey(i);
+                String key = conn.getHeaderFieldKey(++i);
                 String value = conn.getHeaderField(i);
 
                 if (key == null && value == null) {
                     break;
                 }
                 System.out.println("key = "+key + ": value = " + value);
-                i++;
             }
         } catch (Exception e) {
             System.out.println("error :-" + e);

@@ -1,4 +1,4 @@
-package asignmentFour.lab11;
+package lab11;
 import java.net.*;
 public class Q2MultiCastClientSocket {
     public static void main(String[] args) {

@@ -7,6 +7,7 @@ public class Q3 {
         try {
             URL u = new URL("http://www.google.com");
             Object o = u.getContent();
+            System.out.println(o);
             System.out.println("I got a " + o.getClass().getName());
         } 
         catch (MalformedURLException  e) 

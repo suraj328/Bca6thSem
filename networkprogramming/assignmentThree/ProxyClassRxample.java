@@ -1,27 +1,24 @@
+
 // Java Program to illustrate Proxy Class
 // of java.net package
 // importing java net package to use address and url fields
-import java.net.*;
 // importing the java proxy package
-import java.net.Proxy;
-
+import java.net.*;
 
 public class ProxyClassRxample {
 
 	// Main driver method
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		// Creating socket address with port 8080
 		// by creating object of SocketAddress class
 		SocketAddress addr = new InetSocketAddress(
-			"www.facebook.com", 443);
+				"www.facebook.com", 443);
 
 		// Creating proxy object of type HTTP with
 		// address addr using the class constructor
 		Proxy proxy = new Proxy(Proxy.Type.HTTP, addr);
 
 		// Try block to check for exceptions
-		
 
 		// Printing Proxy Type
 		// using type() method
@@ -30,16 +27,20 @@ public class ProxyClassRxample {
 		// Printing Proxy Address
 		// using address() method
 		System.out.println("Proxy Address: "
-						+ proxy.address());
+				+ proxy.address());
 
 		// Printing Proxy Hashcode
 		// using hashCode() method
 		System.out.println("Proxy HasHCode: "
-						+ proxy.hashCode());
+				+ proxy.hashCode());
 
 		// Printing Proxy String representation
 		// using toString() method
 		System.out.println("Proxy String: "
-						+ proxy.toString());
+				+ proxy.toString());
+		// local address and port
+		InetSocketAddress inetSocketAddress = (InetSocketAddress) proxy.address();
+		System.out.println("local address:- " + inetSocketAddress.getAddress());
+		System.out.println("local port" + inetSocketAddress.getPort());
 	}
 }

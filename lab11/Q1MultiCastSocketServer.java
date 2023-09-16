@@ -1,4 +1,4 @@
-package asignmentFour.lab11;
+package lab11;
 
 /**
  * Q1MultiCastSocketServer

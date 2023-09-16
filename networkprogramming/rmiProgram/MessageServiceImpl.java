@@ -10,6 +10,7 @@ public class MessageServiceImpl extends UnicastRemoteObject implements MessageSe
 
     @Override
     public String getMessage() throws RemoteException {
-        return "Hello, client!";
+        return "hello client";
     }
+    
 }

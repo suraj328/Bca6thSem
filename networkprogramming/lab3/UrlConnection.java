@@ -8,7 +8,7 @@ import java.net.URLConnection;
 public class UrlConnection {
     public static void main(String[] args) {
         try {
-            URL url = new URL("https://www.javatpoint.com");
+            URL url = new URL("https://nehashah.info.np");
             URLConnection con =  url.openConnection();
             con.setRequestProperty("User-Agent", "Mozila/5.0");
             con.connect();
@@ -27,4 +27,4 @@ public class UrlConnection {
         }
     }
 }
-//download page 2
+//download page or web content of url

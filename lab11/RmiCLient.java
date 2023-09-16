@@ -1,4 +1,4 @@
-package asignmentFour.lab11;
+package lab11;
 import java.rmi.*;
 public class RmiCLient {
     public static void main(String[] args) {

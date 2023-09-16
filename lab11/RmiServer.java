@@ -1,4 +1,4 @@
-package asignmentFour.lab11;
+package lab11;
 import java.rmi.*;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
