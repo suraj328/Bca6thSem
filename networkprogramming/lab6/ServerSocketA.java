@@ -4,9 +4,7 @@ import java.net.*;
 import java.io.*;
 // import java.net.ServerSocket;
 
-
 public class ServerSocketA {
-    
 
     public static void main(String[] args) {
 
@@ -37,7 +35,6 @@ public class ServerSocketA {
                 clientSocket.close();
                 System.out.println("Connection closed");
             }
-
         } catch (IOException e) {
             System.err.println("Exception caught: " + e);
         }

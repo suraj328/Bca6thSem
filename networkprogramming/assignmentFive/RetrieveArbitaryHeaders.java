@@ -26,8 +26,8 @@ public class RetrieveArbitaryHeaders {
             while ((line = reader.readLine()) != null) {
                 response.append(line);
             }
-            reader.close();
             System.out.println(response.toString());
+            reader.close();
             }
         } catch (Exception e) {
             // TODO: handle exception

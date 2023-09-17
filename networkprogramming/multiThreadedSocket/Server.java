@@ -1,4 +1,4 @@
-package networkprogramming.multiThreadedSocket;
+package multiThreadedSocket;
 
 import java.io.*;
 import java.net.*;

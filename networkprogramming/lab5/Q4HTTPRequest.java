@@ -9,7 +9,7 @@ import java.nio.Buffer;
 
 public class Q4HTTPRequest {
     public static void main(String[] args)  throws Exception {
-        URL url = new URL("https://www.facebook.com");
+        URL url = new URL("http://fakestoreapi.com/products");
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("GET");
         int responseCode = con.getResponseCode();

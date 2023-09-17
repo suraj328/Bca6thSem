@@ -1,0 +1,54 @@
+Handshake Completion Event:
+
+    Event: This event is triggered when the SSL/TLS handshake process is completed successfully.
+    Handler: You can register a handshake completion event handler to perform actions once the handshake is established, such as initiating data transfer.
+
+sslSocket.addHandshakeCompletedListener(event -> {
+    // Handle the handshake completion event
+    System.out.println("Handshake completed successfully.");
+});
+-------------------------------------------------------------------------------------------------------------------------------
+
+Exception/Error Handling:
+
+    Event: SSL/TLS communication can encounter exceptions and errors, such as certificate validation failures or connection issues.
+    Handler: Register exception/error handlers to gracefully handle and log errors and exceptions that may occur during SSL/TLS communication.
+
+Example:
+sslSocket.addSslExceptionListener(exception -> {
+    // Handle SSL/TLS exception
+    System.err.println("SSL/TLS Exception: " + exception.getMessage());
+});
+
+-------------------------------------------------------------------------------------------------------------------------------
+Data Available Event (Reading):
+
+    Event: This event is triggered when there is data available to be read from the SSL/TLS socket.
+    Handler: You can register a data available event handler to read and process incoming data.
+
+Example:
+sslSocket.addInputRecordListener(event -> {
+    // Handle incoming data
+    byte[] data = new byte[event.getLength()];
+    event.getInputStream().read(data);
+    // Process the received data
+});
+-------------------------------------------------------------------------------------------------------------------------------
+Data Sent Event (Writing):
+
+    Event: This event is triggered when data has been successfully sent over the SSL/TLS socket.
+    Handler: You can register a data sent event handler to perform actions after data has been sent.
+
+Example:
+sslSocket.addOutputRecordListener(event -> {
+    // Handle data sent event
+    // This event is triggered after data is successfully sent
+});
+
+Closure Event:
+    Event: This event occurs when the SSL/TLS connection is closed.
+    Handler: Register a closure event handler to perform cleanup or logging when the connection is closed.
+sslSocket.addConnectionClosedListener(event -> {
+    // Handle connection closure event
+    System.out.println("Connection closed.");
+});
