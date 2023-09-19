@@ -54,7 +54,7 @@ public class NonBlockingIOServer {
 
                             String message = new String(data);
                             System.out.println("Received from client: " + message);
-                            
+
                             // Echo the message back to the client
                             clientSocketChannel.write(ByteBuffer.wrap(data));
                         }
@@ -68,3 +68,10 @@ public class NonBlockingIOServer {
         }
     }
 }
+// ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
+
+// // Set the SO_RCVBUF socket option to 1024 bytes.
+// serverSocketChannel.setOption(StandardSocketOptions.SO_RCVBUF, 1024);
+
+// // Set the SO_SNDBUF socket option to 1024 bytes.
+// serverSocketChannel.setOption(StandardSocketOptions.SO_SNDBUF, 1024);

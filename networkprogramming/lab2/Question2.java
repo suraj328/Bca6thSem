@@ -6,6 +6,7 @@ public class Question2 {
     public static void main(String[] args) {
         try {
             InetAddress me = InetAddress.getLocalHost();
+            System.out.println(me);
             String dottedQuad = me.getHostAddress();
             System.out.println("My address is: "  + dottedQuad);
         } catch (UnknownHostException e) {

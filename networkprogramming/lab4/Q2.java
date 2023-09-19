@@ -30,7 +30,6 @@ public class Q2 {
                 for(String cookie : cookiesHeader){
                     cookies.getCookieStore().add(null,HttpCookie.parse(cookie).get(0));
                 }
-
             }
             System.out.println("Cookies: +"+cookies.getCookieStore().getCookies());
         } catch (Exception e) {

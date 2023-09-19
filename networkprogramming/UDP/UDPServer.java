@@ -1,4 +1,4 @@
-package networkprogramming.UDP;
+package UDP;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -22,7 +22,7 @@ public class UDPServer {
             // Get the sender's address and port
             InetAddress address = packet.getAddress();
             int port = packet.getPort();
-
+            
             // Get the message from the packet
             String message = new String(packet.getData(), 0, packet.getLength());
 

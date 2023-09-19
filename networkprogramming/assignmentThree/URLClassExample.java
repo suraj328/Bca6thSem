@@ -12,11 +12,11 @@ public class URLClassExample {
             System.out.println("path of url is " + url.getPath());
             System.out.println("Query string of url is " + url.getQuery());
             System.out.println("file of url is" + url.getFile());
+            System.out.println("ref of url is" + url.getRef());
             System.out.println("protocol of url is" + url.getProtocol());
             System.out.println("port of url is" + url.getPort());
             System.out.println("content of url is" + url.getContent());
             System.out.println("user info of url is" + url.getUserInfo());
-            System.out.println("ref of url is" + url.getRef());
 
 
             //openConnection
