@@ -1,0 +1,71 @@
+// give all field name
+query {
+  __type(name: "Employee") {
+    fields {
+      name
+    }
+  }
+}
+//give each colum store null value or not
+query {
+  __type(name: "Employee") {
+    fields {
+      name
+      type {
+        name
+        kind
+      }
+    }
+  }
+}
+
+//to fetch data
+query {
+    //give your specific query name
+    getAllEmployees {
+        employeeId
+        firstName
+        lastName
+        jobTitle
+    }
+}
+// to fetch data by speicific column
+query {
+    pass argument should match QueryMapping pass argument
+    getOneEmployee(employeeId: 2) {
+        employeeId
+        firstName
+        lastName
+        jobTitle
+    }
+}
+//syntax for data insertion
+mutation {
+    createEmployee(employeeInput:{
+        firstName:"dipendra",
+        lastName:"adhikari",
+        jobTitle:"rider"
+    }){
+      //mention field which you want on respose
+        employeeId
+    }
+}
+
+//for data updation
+mutation {
+    updateEmployee(updateEmployeeInput:{
+        employeeId:5
+        firstName:"dipendra",
+        lastName:"adhikari",
+        jobTitle:"play boy"
+    }){
+        employeeId,
+        firstName,
+        lastName,
+        jobTitle
+    }
+}
+//for deleting use mutation
+mutation {
+  deleteEmployee(employeeId: 1)
+}
